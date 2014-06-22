@@ -23,6 +23,7 @@ img { border: 0; }
 #content table {
   border: 0;
   width: 100%;
+  border-collapse: collapse;
 }
 /*Hack to get IE to render the table at 100%*/
 * html #content table { margin-left: -3px; }
@@ -30,9 +31,18 @@ img { border: 0; }
 #content th,
 #content td {
   margin: 0;
-  padding: 0;
+  padding: 2px;
   vertical-align: top;
+  text-align: left;
+  border: 1px solid #ccc;
 }
+
+#content th{
+  color: #ffffff;
+  background-color: #ccc;
+  text-align: center;
+}
+
 
 .clearboth {
   clear: both;

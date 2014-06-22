@@ -5,7 +5,7 @@
 		<meta name="Generator" content="Jekyll">
 		<meta name="Jekyll-version" content="0.8">
 		<meta name="markdown-version" content="pelt">
-		<title>Hadoop中文文档-{{ page.title }}</title>
+		<title>{% if page.title %}{{ page.title }}{% else %} Hadoop中文文档{% endif %}</title>
 		<link type="text/css" href="/skin/basic.css" rel="stylesheet">
 		<link media="screen" type="text/css" href="/skin/screen.css" rel="stylesheet">
 		<link media="print" type="text/css" href="/skin/print.css" rel="stylesheet">
@@ -13,12 +13,14 @@
 		<script src="/skin/getBlank.js" language="javascript" type="text/javascript"></script>
 		<script src="/skin/getMenu.js" language="javascript" type="text/javascript"></script>
 		<script src="/skin/fontsize.js" language="javascript" type="text/javascript"></script>
+		<script src="/skin/jquery-1.7.1.min.js" language="javascript" type="text/javascript"></script>
 		<link rel="shortcut icon" href="/images/favicon.ico">
 	</head>
 	<body onload="init()">
 		<script type="text/javascript">ndeSetTextSize();</script>
 		<div id="top">
 
+			<!-- need to be analysed -->
 			<div class="breadtrail">
 				<a href="http://www.apache.org">Apache</a> 
 				&gt;
@@ -73,12 +75,13 @@
 
 			<div id="menu">
 				
+				<!-- need to be analyzed -->
 				<div onclick="SwitchMenu('menu_selected_1.1', '/skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('/skin/images/chapter_open.gif');">文档</div>
 
 
 				<!-- replace with menu -->
 				<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
-					{% assign sortedPosts = site.posts | sort: 'inner-tag-index' %}
+					{% assign sortedPosts = site.posts | sort: 'tags' %}
 					{% for post in sortedPosts %}
 						<div class="menuitem">
 							<a href="{{ post.url }}">{{ post.title }}</a>
@@ -136,11 +139,11 @@
 				<!-- generate minitoc-area from content -->
 				<!-- insert an element <h1> before the below element -->
 				<!-- dynamic add the below to the to the "content" -->
+				<!--
 				<div id="minitoc-area">
-					<!-- insert a list of '<li><a></a></li>' into <ul> -->
 					<ul class="minitoc"></ul>
 				</div>
-				
+				-->
 				
 				
 				<!-- replace with markdown file -->
@@ -164,5 +167,9 @@
 		</div>
 
 	</body>
+
+<!-- can this JS be put ahead? -->
+<script src="/skin/minitoc.js" type="text/javascript"></script>
+
 </html>
 

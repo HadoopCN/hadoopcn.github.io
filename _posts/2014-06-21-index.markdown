@@ -3,7 +3,7 @@ layout: default
 title:  概述
 date:   2014-06-21
 categories: 0.18
-tags: 文档
+tags: 文档 1
 tag-index: 1
 inner-tag-index: 1
 ---
