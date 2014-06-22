@@ -72,29 +72,13 @@
 			</div>
 
 			<div id="menu">
-				{% for singleTagPosts in site.posts | group_by:"tags" %}
-
-					<div onclick="SwitchMenu('menu_selected_1.1', '/skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('/skin/images/chapter_open.gif');">
-						{{ singleTagPosts.name }}
-					</div>
-
-					{% for singleTagePost in singleTagePosts.items | sort:"inner-tag-index" %}
-						<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
-							<a href="{{ singleTagePost.url }}">{{ singleTagePost.title }}</a>
-						</div>
-					{% endfor %}
-				{% endfor %}
-
-				<div onclick="SwitchMenu('menu_selected_1.1', '/skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('/skin/images/chapter_open.gif');">文档</div>
 				
-
-<!--
 				<div onclick="SwitchMenu('menu_selected_1.1', '/skin/')" id="menu_selected_1.1Title" class="menutitle" style="background-image: url('/skin/images/chapter_open.gif');">文档</div>
--->
+
 
 				<!-- replace with menu -->
 				<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
-					{% for post in site.posts %}
+					{% for post in (site.posts | sort: 'inner-tag-index') %}
 						<div class="menuitem">
 							<a href="{{ post.url }}">{{ post.title }}</a>
 						</div>
