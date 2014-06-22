@@ -78,7 +78,8 @@
 
 				<!-- replace with menu -->
 				<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
-					{% for post in site.posts | sort: inner-tag-index %}
+					{% assign sortedPosts = site.posts | sort: 'inner-tag-index' %}
+					{% for post in sortedPosts %}
 						<div class="menuitem">
 							<a href="{{ post.url }}">{{ post.title }}</a>
 						</div>
