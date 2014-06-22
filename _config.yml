@@ -1,0 +1,6 @@
+markdown: kramdown
+pygments: true
+
+# 可访问页面对应URL的格式
+permalink: /:title
+

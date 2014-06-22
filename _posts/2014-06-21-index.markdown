@@ -1,0 +1,22 @@
+---
+layout: default
+title:  概述
+date:   2014-06-21
+categories: 0.18
+tags: 文档
+tag-index: 1
+inner-tag-index: 1
+---
+
+#Hadoop文档
+
+下面的文档是一些概念介绍和操作教程，可帮助你开始使用Hadoop。如果遇到了问题，你可以向[邮件列表](http://hadoop.apache.org/core/mailing_lists.html)求助或者浏览一下存档邮件。
+
+* [Hadoop快速入门]({% post_url 2014-06-21-quickstart %})
+* [Hadoop集群搭建]({% post_url 2014-06-21-cluster-setup %})
+* [Hadoop分布式文件系统]({% post_url 2014-06-21-hdfs-design %})
+* [Hadoop Map-Reduce教程]({% post_url 2014-06-21-mapred-tutorial %})
+* [Hadoop本地库]({% post_url 2014-06-21-native-libraries %})
+* [API参考](http://hadoop.apache.org/core/docs/r0.18.2/api/index.html)
+* [维基](http://wiki.apache.org/hadoop/)
+* [常见问题](http://wiki.apache.org/hadoop/FAQ/)
