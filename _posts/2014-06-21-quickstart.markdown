@@ -5,7 +5,7 @@ date:   2014-06-21
 categories: 0.18
 tags: 文档 2
 tag-index: 1
-inner-tag-index: 3
+inner-tag-index: 2
 ---
 
 #Hadoop快速入门
@@ -123,8 +123,8 @@ Hadoop守护进程的日志写入到 ${HADOOP_LOG_DIR} 目录 (默认是 ${HADOO
 
 浏览NameNode和JobTracker的网络接口，它们的地址默认为：
 
-* NameNode - [http://localhost:50070/]
-* JobTracker - [http://localhost:50030/]
+* NameNode - [http://localhost:50070/]()
+* JobTracker - [http://localhost:50030/]()
 
 将输入文件拷贝到分布式文件系统：
 

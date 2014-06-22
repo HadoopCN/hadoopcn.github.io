@@ -5,7 +5,7 @@ date:   2014-06-21
 categories: 0.18
 tags: 文档 3
 tag-index: 1
-inner-tag-index: 2
+inner-tag-index: 3
 ---
 
 #Hadoop集群搭建

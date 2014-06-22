@@ -96,10 +96,9 @@ $(document).ready(function(){
         }
 
 		function editMenuPage(){
-var curTitle = $('title').text();
+			var curTitle = $('title').text();
 
-
-}
+		}
 
 
         if($('.pre h2').length > 0 && !isMobile.any() ){
