@@ -1,8 +1,11 @@
 ---
 layout: default
 title:  快速入门
-date:   2014-06-21 14:34:21
-categories: Hadoop中文文档
+date:   2014-06-21
+categories: 0.18
+tags: 文档
+tag-index: 1
+inner-tag-index: 2
 ---
 
 #Hadoop文档
