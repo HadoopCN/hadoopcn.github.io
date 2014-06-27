@@ -18,9 +18,14 @@ Hadoop分布式文件系统(HDFS)允许管理员为每个目录设置配额。 �
 
 下面的新命令或新选项是用于支持配额的。 前两个是管理员命令。
 
-* dfsadmin -setquota <N> <directory>...<directory> 
-把每个目录配额设为N。这个命令会在每个目录上尝试， 如果N不是一个正的长整型数，目录不存在或是文件名， 或者目录超过配额，则会产生错误报告。
-* dfsadmin -clrquota <directory>...<director> 
-为每个目录删除配额。这个命令会在每个目录上尝试，如果目录不存在或者是文件，则会产生错误报告。如果目录原来没有设置配额不会报错。
-* fs -count -q <directory>...<directory> 
-使用-q选项，会报告每个目录设置的配额，以及剩余配额。 如果目录没有设置配额，会报告none和inf。
+* dfsadmin -setquota `<N> <directory>...<directory>` 
+
+> 把每个目录配额设为N。这个命令会在每个目录上尝试， 如果N不是一个正的长整型数，目录不存在或是文件名， 或者目录超过配额，则会产生错误报告。
+
+* dfsadmin -clrquota `<directory>...<director>` 
+
+> 为每个目录删除配额。这个命令会在每个目录上尝试，如果目录不存在或者是文件，则会产生错误报告。如果目录原来没有设置配额不会报错。
+
+* fs -count -q `<directory>...<directory>` 
+
+> 使用-q选项，会报告每个目录设置的配额，以及剩余配额。 如果目录没有设置配额，会报告none和inf。

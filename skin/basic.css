@@ -169,6 +169,10 @@ p {
   margin-left: auto;
 }
 
+#content code {
+font-family: Verdana, Helvetica, sans-serif;
+}
+
 #content li li,
 #minitoc-area li{
   margin-top: 0em;

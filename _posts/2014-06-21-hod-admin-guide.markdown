@@ -6,6 +6,7 @@ categories: 0.18
 tags: 文档 97
 tag-index: 1
 inner-tag-index: 97
+unlist:	true
 ---
 
 #Hadoop On Demand管理指南

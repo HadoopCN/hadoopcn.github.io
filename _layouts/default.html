@@ -83,9 +83,17 @@
 				<div id="menu_selected_1.1" class="selectedmenuitemgroup" style="display: block;">
 					{% assign sortedPosts = site.posts | sort: 'tags' %}
 					{% for post in sortedPosts %}
-						<div class="menuitem">
-							<a href="{{ post.url }}">{{ post.title }}</a>
-						</div>
+						{% if post.unlist %}
+
+						{% elsif post.title == page.title %}
+							<div class="menupage">
+								<div class="menupagetitle">{{ post.title }}</div>
+							</div>
+						{% else %}
+							<div class="menuitem">
+								<a href="{{ post.url }}">{{ post.title }}</a>
+							</div>
+						{% endif %}
 					{% endfor %}
 
 					<!-- need to edit for convenience -->
@@ -131,7 +139,7 @@
 
 				<!-- replace with PDF format files, which are produced by JavaScript -->
 				<div title="Portable Document Format" class="pdflink">
-					<a class="dida" href="index.pdf"><img alt="" src="/skin/images/pdfdoc.gif" class="skin">
+					<a class="dida" href="#"><img alt="" src="/skin/images/pdfdoc.gif" class="skin">
 						<br>PDF
 					</a>
 				</div>
